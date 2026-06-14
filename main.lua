@@ -14,7 +14,7 @@ local mainFrame = Instance.new("Frame")
 mainFrame.Name = "MainHub"
 mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-mainFrame.Size = UDim2.new(0, 260, 0, 320)
+mainFrame.Size = UDim2.new(0, 260, 0, 380) -- [CẬP NHẬT]: Tăng từ 320 lên 380 để chứa thêm nút thứ 4
 mainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 20)
 mainFrame.BorderSizePixel = 0
 mainFrame.Active = true
@@ -98,7 +98,7 @@ local function createLoadButton(text, pos, color, loadUrl)
 end
 
 -- =================================================== --
---             DANH SÁCH 3 LINK PUBLIC ĐÃ ĐỒNG BỘ      --
+--               DANH SÁCH CÁC LINK GITHUB             --
 -- =================================================== --
 
 -- Nút 1: Auto Teleport
@@ -117,12 +117,20 @@ createLoadButton(
     "https://raw.githubusercontent.com/hacolord/esp-item/refs/heads/main/main.lua"
 )
 
--- Nút 3: Float System (Đã cập nhật bản sửa lỗi cơ chế ván cổ điển của bạn)
+-- Nút 3: Float System
 createLoadButton(
     "FLOAT SYSTEM", 
     UDim2.new(0, 20, 0, 210), 
     Color3.fromRGB(40, 160, 100),
     "https://raw.githubusercontent.com/hacolord/float/refs/heads/main/main.lua"
+)
+
+-- [MỚI CHÈN] Nút 4: Target Tracker (Nạp trực tiếp từ link GitHub mới của bạn)
+createLoadButton(
+    "TARGET TRACKER", 
+    UDim2.new(0, 20, 0, 280), -- Đặt thẳng hàng ngay dưới nút số 3
+    Color3.fromRGB(180, 50, 50), -- Màu đỏ đậm chiến đấu cực ngầu
+    "https://raw.githubusercontent.com/hacolord/-/refs/heads/main/main.lua"
 )
 
 -- =================================================== --
